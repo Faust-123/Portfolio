@@ -1,92 +1,572 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EXERCICE</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABI Gnim-gong Faustin — Développeur web &amp; dessinateur</title>
+  <meta name="description" content="Portfolio d'ABI Gnim-gong Faustin : développeur web (HTML, CSS, JavaScript), chef de chantier et dessinateur passionné. Découvrez son parcours, ses compétences et sa galerie de dessins.">
+  <meta name="author" content="ABI Gnim-gong Faustin">
+  <meta name="theme-color" content="#0b0f14">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="ABI Gnim-gong Faustin — Développeur web &amp; dessinateur">
+  <meta property="og:description" content="Parcours, compétences, dessins et artisanat d'ABI Gnim-gong Faustin.">
+  <meta property="og:image" content="img/portrait.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0f14'/%3E%3Ctext x='32' y='43' font-family='system-ui,sans-serif' font-size='30' font-weight='700' fill='%23f5a623' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-    <header>
-        <h1 style="color: aliceblue;">ABI Gnim-gong <br>
-        faustin</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Information personelles</a></li>
-                <li><a href="#">Formation</a></li>
-                <li><a href="#">Expérience professionnelle</a></li>
+  <a class="skip-link" href="#accueil">Aller au contenu principal</a>
 
-            </ul>
-       
-        </nav>
-        
-    </header>
-    <main style="width: 100%;margin: 70px;color: aliceblue;">
-        <h1>Accueill</h1>
-        <div style="display: flex;">
-          
-            <div style="width: 60%;">
-                <p>Echenté je suis dévéloppeur web (HTML,css,et javascript) </p>
-                <img src="img/image.png" alt="" class="image">
-                <div style="margin: 40px;">
-                    <p> pationné par le dessin</p>
-                    <img src="img/WhatsApp Image 2025-02-06 à 19.53.56_da1a4ca1.jpg" alt="" class="img1">
-                    <img src="img/WhatsApp Image 2025-02-06 à 19.53.55_dcc9ee48.jpg" alt="" class="img1">
-                    <img src="img/WhatsApp Image 2025-02-06 à 19.53.56_37efe175.jpg" alt="" class="img1">
-                    <img src="img/WhatsApp Image 2025-02-06 à 19.53.57_7560d931.jpg" alt="" class="img1">
-                    
-                </div>
-                <P style="font-weight: bold;"> J'apprend vite, je suis de nature calme et travaileur</P>
-               
+  <header class="site-header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="#accueil" aria-label="Accueil — ABI Gnim-gong Faustin">
+        <span class="brand__mark">AF</span>
+        <span class="brand__text">
+          <strong>ABI Gnim-gong</strong>
+          <small>Faustin</small>
+        </span>
+      </a>
 
-            </div>
-            <div>
-                <img src="img/Lumii_20250120_203452543.jpg" alt="">
-            </div>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
 
+      <nav class="nav" id="primaryNav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#accueil" class="nav__link is-active">Accueil</a></li>
+          <li><a href="#apropos" class="nav__link">À propos</a></li>
+          <li><a href="#formation" class="nav__link">Formation</a></li>
+          <li><a href="#experience" class="nav__link">Expérience</a></li>
+          <li><a href="#galerie" class="nav__link">Galerie</a></li>
+          <li><a href="#artisanat" class="nav__link">Artisanat</a></li>
+          <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="accueil">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <p class="eyebrow">Développeur web <span aria-hidden="true">·</span> Dessinateur <span aria-hidden="true">·</span> Kara</p>
+          <h1 class="hero__title">
+            ABI Gnim-gong <span class="grad">Faustin</span>
+          </h1>
+          <p class="hero__lead">
+            Étudiant passionné par la création : je construis des pages web en
+            <strong>HTML</strong>, <strong>CSS</strong> et <strong>JavaScript</strong>, et je dessine dès que
+            j'ai un crayon en main. J'apprends vite, je suis de nature calme et travailleur.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#contact">
+              Me contacter
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#galerie">
+              Voir mes dessins
+            </a>
+          </div>
+
+          <ul class="chips" aria-label="Compétences clés">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Dessin</li>
+            <li>Gestion de chantier</li>
+          </ul>
         </div>
-    </main>
-    <main style="margin: 10px;background-color: black;color: aliceblue;">
-        
-            <h1>Information personelles</h1>
-            <p>TEL : 98389501</p>
-            <P>Mail :abignimgong@gmail.com</P>
-            <p>Adress: Lama kpedan</p>
-            <p>profession : Etudiant</p>
-            <p>Né le 18/11/2001</p>
-            <hr>
-        
-    </main>
-    <main style="margin: 5px;background-color: black;height: 45px;width: 100%;color: aliceblue; height: 250px;" >
-        <h1>Formation</h1>
-            <div style="margin: 1Opx;">
-                    <p>j'ai fait mon colège à chaminade,<br>
-                        le lycé au lycé kara 2, <br>
-                    puis pour finir j'ai suivi une formation de marionetiste à l'affaire social de kara en 2010 et une autre à la maison des jeunnes où ont nous apprenait à fabriquer des boucles d'oreilles et plusieurs d'autres choses en se sèrvent des calendriés, col,et scotch,  quant j'etait gamin.
-                    <br>
-                    <img src="img/image copy.png" alt="" class="img1">
-            <img src="img/image copy 2.png" alt="" class="img1">
-            <img src="img/image copy 3.png" alt="" class="img1">
-            <br>
-                    </p>
-                    <hr>
-                    <br>
-  
-    </main>
-    <main style="color: aliceblue;width: 100%;margin: 10px;">
-        <h1>Experience professionnelle</h1>
-        <p style="font-weight: bolder;">j'ai acquis des Expériences dans le domaine de la construction 
-            en étant controleur et chef chantier de trois chantier à kara.
-            grace à sela, j'ai appris à travailler sous prèssion, à conduir un trycicle,à négocier,et à commender.
-           .
-        </p>
-        <br>
-        <hr>
 
-    </main>
-    <footer style="background-color: black;width: 100%;height: 20px;color:blanchedalmond;">
-        <p style="display: flex;justify-content: center;font-weight: bold;">mon portefolio:edition 2025</p>
-    </footer>
+        <div class="hero__media reveal" data-delay="120">
+          <div class="portrait-card">
+            <img src="img/portrait.jpg" width="518" height="720"
+                 alt="Portrait d'ABI Gnim-gong Faustin" fetchpriority="high" decoding="async">
+          </div>
+          <div class="portrait-badges">
+            <span class="badge badge--amber">Né le 18/11/2001</span>
+            <span class="badge">Étudiant</span>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-hint" href="#apropos" aria-label="Descendre vers la section À propos">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ===================== À PROPOS ===================== -->
+    <section class="section" id="apropos">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Information personnelles</p>
+          <h2 class="section__title">À propos de moi</h2>
+          <p class="section__subtitle">
+            Un parcours qui mêle la précision du code, la patience du dessin et l'organisation du chantier.
+          </p>
+        </header>
+
+        <div class="about">
+          <div class="about__text reveal">
+            <p>
+              J'habite à <strong>Lama Kpedan (Kara)</strong>. Curieux de nature, je partage mon temps entre
+              l'écriture de pages web, le crayon et le papier, et le travail de terrain sur les chantiers.
+            </p>
+            <p>
+              Cette double casquette technique et artistique m'a appris la rigueur, l'observation et le sens du
+              détail — trois qualités que je mets dans chaque projet que j'entreprends.
+            </p>
+            <p class="about__quote">
+              « J'apprends vite, je suis de nature calme et travailleur. »
+            </p>
+
+            <h3 class="h3">Ce qui me caractérise</h3>
+            <ul class="feature-list">
+              <li><span class="ico" aria-hidden="true">⚡</span> Apprentissage rapide</li>
+              <li><span class="ico" aria-hidden="true">🧘</span> Calme et concentré</li>
+              <li><span class="ico" aria-hidden="true">💪</span> Travail sous pression</li>
+              <li><span class="ico" aria-hidden="true">🤝</span> Négociation</li>
+              <li><span class="ico" aria-hidden="true">📋</span> Sens du commandement</li>
+              <li><span class="ico" aria-hidden="true">🎨</span> Œil artistique</li>
+            </ul>
+          </div>
+
+          <div class="about__cards">
+            <article class="info-card reveal" data-delay="60">
+              <span class="info-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.25 1z"/></svg>
+              </span>
+              <div>
+                <p class="info-card__label">Téléphone</p>
+                <p class="info-card__value"><a href="tel:+22898389501">98 38 95 01</a></p>
+              </div>
+            </article>
+
+            <article class="info-card reveal" data-delay="100">
+              <span class="info-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1m1.6 2L12 12.2 19.4 7z"/></svg>
+              </span>
+              <div>
+                <p class="info-card__label">E-mail</p>
+                <p class="info-card__value"><a href="mailto:abignimgong@gmail.com">abignimgong@gmail.com</a></p>
+              </div>
+            </article>
+
+            <article class="info-card reveal" data-delay="140">
+              <span class="info-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7m0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5"/></svg>
+              </span>
+              <div>
+                <p class="info-card__label">Adresse</p>
+                <p class="info-card__value">Lama Kpedan, Kara</p>
+              </div>
+            </article>
+
+            <article class="info-card reveal" data-delay="180">
+              <span class="info-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.9V17h2V9zm0 13.7L5 12.9V16c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.1z"/></svg>
+              </span>
+              <div>
+                <p class="info-card__label">Profession</p>
+                <p class="info-card__value">Étudiant</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Compétences -->
+        <div class="skills" id="competences">
+          <h3 class="h3 h3--center reveal">Compétences techniques</h3>
+          <div class="skills__layout">
+            <div class="skills__grid">
+              <div class="skill reveal" style="--level: 85%">
+                <div class="skill__top"><span>HTML</span><span class="skill__pct">85%</span></div>
+                <div class="skill__bar"><i></i></div>
+              </div>
+              <div class="skill reveal" style="--level: 78%" data-delay="60">
+                <div class="skill__top"><span>CSS</span><span class="skill__pct">78%</span></div>
+                <div class="skill__bar"><i></i></div>
+              </div>
+              <div class="skill reveal" style="--level: 65%" data-delay="120">
+                <div class="skill__top"><span>JavaScript</span><span class="skill__pct">65%</span></div>
+                <div class="skill__bar"><i></i></div>
+              </div>
+              <div class="skill reveal" style="--level: 80%" data-delay="180">
+                <div class="skill__top"><span>Dessin &amp; illustration</span><span class="skill__pct">80%</span></div>
+                <div class="skill__bar"><i></i></div>
+              </div>
+            </div>
+
+            <aside class="code-card reveal" data-delay="120">
+              <img src="img/code.jpg" width="183" height="275" loading="lazy" decoding="async"
+                   alt="Éditeur de code affiché sur un écran d'ordinateur portable">
+              <div class="code-card__body">
+                <h4>Développement web</h4>
+                <p>
+                  Je crée des pages web simples et propres : structure HTML claire, mise en page CSS
+                  responsive et interactions en JavaScript. Ce portfolio en est l'exemple.
+                </p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FORMATION ===================== -->
+    <section class="section section--alt" id="formation">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Formation</p>
+          <h2 class="section__title">Mon parcours scolaire &amp; créatif</h2>
+          <p class="section__subtitle">
+            Du collège aux ateliers d'artisanat : chaque étape m'a appris une manière différente de créer.
+          </p>
+        </header>
+
+        <div class="formation">
+          <ol class="timeline">
+            <li class="timeline__item reveal">
+              <span class="timeline__dot" aria-hidden="true"></span>
+              <div class="timeline__body">
+                <p class="timeline__date">Collège</p>
+                <h3 class="timeline__title">Collège Chaminade</h3>
+                <p>Premières années d'études secondaires, où j'ai découvert le dessin et le travail soigné.</p>
+              </div>
+            </li>
+
+            <li class="timeline__item reveal" data-delay="60">
+              <span class="timeline__dot" aria-hidden="true"></span>
+              <div class="timeline__body">
+                <p class="timeline__date">Lycée</p>
+                <h3 class="timeline__title">Lycée Kara 2</h3>
+                <p>Poursuite de ma scolarité et consolidation de mes méthodes de travail.</p>
+              </div>
+            </li>
+
+            <li class="timeline__item reveal" data-delay="120">
+              <span class="timeline__dot" aria-hidden="true"></span>
+              <div class="timeline__body">
+                <p class="timeline__date">2010</p>
+                <h3 class="timeline__title">Formation de marionnettiste</h3>
+                <p>Action Sociale de Kara — travail de la matière, des volumes et du détail pour donner vie à des personnages.</p>
+              </div>
+            </li>
+
+            <li class="timeline__item reveal" data-delay="180">
+              <span class="timeline__dot" aria-hidden="true"></span>
+              <div class="timeline__body">
+                <p class="timeline__date">Ateliers créatifs</p>
+                <h3 class="timeline__title">Maison des Jeunes</h3>
+                <p>
+                  Fabrication de boucles d'oreilles et de nombreux autres objets à partir de calendriers, de colle
+                  et de scotch — une première école de la débrouillardise et du recyclage créatif, commencée enfant.
+                </p>
+              </div>
+            </li>
+          </ol>
+
+          <aside class="formation__aside reveal" data-delay="120">
+            <figure class="figure-card">
+              <img src="img/artisanat/marionnettes.png" width="273" height="185" loading="lazy" decoding="async"
+                   alt="Groupe de marionnettes traditionnelles fabriquées à la main, présentées côte à côte">
+              <figcaption>
+                <strong>Atelier marionnettes</strong>
+                Personnages fabriqués et habillés à la main lors de ma formation à l'Action Sociale de Kara.
+              </figcaption>
+            </figure>
+
+            <ul class="mini-stats">
+              <li>
+                <span class="mini-stats__num">4</span>
+                <span class="mini-stats__label">Étapes de formation</span>
+              </li>
+              <li>
+                <span class="mini-stats__num">2</span>
+                <span class="mini-stats__label">Ateliers créatifs suivis</span>
+              </li>
+              <li>
+                <span class="mini-stats__num">3</span>
+                <span class="mini-stats__label">Chantiers encadrés</span>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPÉRIENCE ===================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Expérience professionnelle</p>
+          <h2 class="section__title">Le terrain m'a formé</h2>
+          <p class="section__subtitle">
+            Trois chantiers supervisés à Kara : de quoi apprendre l'organisation, l'exigence et le travail en équipe.
+          </p>
+        </header>
+
+        <div class="exp">
+          <article class="exp__card reveal">
+            <header class="exp__head">
+              <span class="exp__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M2 21h20v-2H2zm2-3h5V9H4zm6 0h4v-8h-4zm5 0h5V4h-5z"/></svg>
+              </span>
+              <div>
+                <h3>Chef de chantier</h3>
+                <p class="exp__meta">3 chantiers · Kara</p>
+              </div>
+            </header>
+            <p>
+              Coordination des équipes, contrôle de la qualité, suivi de l'avancement des travaux et commandement
+              au quotidien sur trois chantiers de construction.
+            </p>
+            <ul class="tags">
+              <li>Organisation</li>
+              <li>Commandement</li>
+              <li>Contrôle qualité</li>
+            </ul>
+          </article>
+
+          <article class="exp__card reveal" data-delay="80">
+            <header class="exp__head">
+              <span class="exp__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M9.7 17.3 4.4 12l1.4-1.4 3.9 3.9 8.5-8.5L19.6 7z"/></svg>
+              </span>
+              <div>
+                <h3>Contrôleur de chantier</h3>
+                <p class="exp__meta">Domaine de la construction · Kara</p>
+              </div>
+            </header>
+            <p>
+              Vérification de la conformité des travaux, repérage des défauts et remontée des informations
+              aux équipes pour corriger rapidement.
+            </p>
+            <ul class="tags">
+              <li>Rigueur</li>
+              <li>Observation</li>
+              <li>Sens du détail</li>
+            </ul>
+          </article>
+
+          <article class="exp__card exp__card--accent reveal" data-delay="160">
+            <header class="exp__head">
+              <span class="exp__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2 3 7v10l9 5 9-5V7zm0 2.3 6.5 3.6L12 11.5 5.5 7.9zM5 9.6l6 3.3v6.9l-6-3.3zm8 10.2v-6.9l6-3.3v6.9z"/></svg>
+              </span>
+              <div>
+                <h3>Compétences acquises</h3>
+                <p class="exp__meta">Savoir-faire transférables</p>
+              </div>
+            </header>
+            <ul class="check-list">
+              <li>Travailler sous pression</li>
+              <li>Négocier avec les partenaires</li>
+              <li>Commander et encadrer une équipe</li>
+              <li>Conduire un tricycle</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GALERIE ===================== -->
+    <section class="section section--alt" id="galerie">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Galerie</p>
+          <h2 class="section__title">Dessins au crayon</h2>
+          <p class="section__subtitle">
+            Portraits, manga, nature morte : cliquez sur une œuvre pour l'agrandir.
+          </p>
+        </header>
+
+        <div class="masonry" id="dessins">
+          <a class="draw reveal" href="img/dessins/portrait-crayon.jpg"
+             data-src="img/dessins/portrait-crayon.jpg"
+             data-caption="Portrait au crayon — travail des ombres et du regard">
+            <img src="img/dessins/portrait-crayon.jpg" width="1080" height="1080" loading="lazy" decoding="async"
+                 alt="Dessin au crayon du portrait d'une femme réalisé en cours de travail">
+            <span class="draw__cap">Portrait au crayon</span>
+          </a>
+
+          <a class="draw reveal" data-delay="60" href="img/dessins/manga.jpg"
+             data-src="img/dessins/manga.jpg"
+             data-caption="Personnages manga — crayon et touches de pastel">
+            <img src="img/dessins/manga.jpg" width="1080" height="1080" loading="lazy" decoding="async"
+                 alt="Dessin manga de deux personnages réalisé au crayon">
+            <span class="draw__cap">Personnages manga</span>
+          </a>
+
+          <a class="draw reveal" data-delay="120" href="img/dessins/nature-morte.jpg"
+             data-src="img/dessins/nature-morte.jpg"
+             data-caption="Nature morte colorée — travail de la couleur et de la matière">
+            <img src="img/dessins/nature-morte.jpg" width="1080" height="1080" loading="lazy" decoding="async"
+                 alt="Nature morte colorée représentant des fruits et un pichet">
+            <span class="draw__cap">Nature morte</span>
+          </a>
+
+          <a class="draw draw--wide reveal" data-delay="180" href="img/dessins/collection.jpg"
+             data-src="img/dessins/collection.jpg"
+             data-caption="Collection de dessins — manga, cartoons et portraits">
+            <img src="img/dessins/collection.jpg" width="1080" height="1080" loading="lazy" decoding="async"
+                 alt="Plusieurs dessins au crayon disposés au sol : personnages manga, cartoons et portraits">
+            <span class="draw__cap">Collection complète</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ARTISANAT ===================== -->
+    <section class="section" id="artisanat">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Fait main</p>
+          <h2 class="section__title">Créations artisanales</h2>
+          <p class="section__subtitle">
+            Fabriquer avec ce qu'on a sous la main : un réflexe appris aux ateliers de la Maison des Jeunes.
+          </p>
+        </header>
+
+        <div class="cards-3">
+          <article class="craft reveal">
+            <img src="img/artisanat/marionnette-mineur.png" width="209" height="209" loading="lazy" decoding="async"
+                 alt="Marionnette d'un mineur avec casque et lunettes">
+            <div class="craft__body">
+              <h3>Marionnettes</h3>
+              <p>Conception de personnages, assemblage des matières et finitions, dans l'esprit de ma formation de marionnettiste.</p>
+            </div>
+          </article>
+
+          <article class="craft reveal" data-delay="80">
+            <img src="img/artisanat/boucles-oreilles.png" width="300" height="168" loading="lazy" decoding="async"
+                 alt="Trois paires de boucles d'oreilles en papier coloré">
+            <div class="craft__body">
+              <h3>Boucles d'oreilles</h3>
+              <p>Bijoux légers et colorés découpés dans du papier recyclé : motifs géométriques, rayures et aplats.</p>
+            </div>
+          </article>
+
+          <article class="craft reveal" data-delay="160">
+            <div class="craft__visual" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2 3 7v10l9 5 9-5V7zm0 2.3 6.5 3.6L12 11.5 5.5 7.9zM5 9.6l6 3.3v6.9l-6-3.3zm8 10.2v-6.9l6-3.3v6.9z"/></svg>
+            </div>
+            <div class="craft__body">
+              <h3>Objets recyclés</h3>
+              <p>Créations réalisées à partir de calendriers, de colle et de scotch — l'art de transformer l'ordinaire.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section section--contact" id="contact">
+      <div class="container contact">
+        <div class="contact__intro reveal">
+          <p class="eyebrow">Contact</p>
+          <h2 class="section__title">Travaillons ensemble</h2>
+          <p class="section__subtitle">
+            Un site à créer, un dessin à réaliser ou une question ? Écrivez-moi, je réponds rapidement.
+          </p>
+
+          <ul class="contact__list">
+            <li>
+              <span class="ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.25 1z"/></svg>
+              </span>
+              <a href="tel:+22898389501">98 38 95 01</a>
+            </li>
+            <li>
+              <span class="ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1m1.6 2L12 12.2 19.4 7z"/></svg>
+              </span>
+              <a href="mailto:abignimgong@gmail.com">abignimgong@gmail.com</a>
+            </li>
+            <li>
+              <span class="ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7m0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5"/></svg>
+              </span>
+              Lama Kpedan, Kara
+            </li>
+          </ul>
+
+          <div class="contact__actions">
+            <a class="btn btn--primary" href="mailto:abignimgong@gmail.com?subject=Contact%20depuis%20votre%20portfolio">
+              Envoyer un e-mail
+            </a>
+            <a class="btn btn--ghost" href="tel:+22898389501">Appeler</a>
+          </div>
+        </div>
+
+        <form class="contact__form reveal" id="contactForm" data-delay="100" novalidate>
+          <h3 class="h3">Envoyer un message</h3>
+          <div class="field">
+            <label for="name">Votre nom</label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="Nom et prénom" required>
+          </div>
+          <div class="field">
+            <label for="email">Votre e-mail</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="vous@exemple.com" required>
+          </div>
+          <div class="field">
+            <label for="message">Votre message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Bonjour Faustin, …" required></textarea>
+          </div>
+          <button class="btn btn--primary btn--block" type="submit">Ouvrir mon logiciel de messagerie</button>
+          <p class="form-note" id="formNote" role="status" aria-live="polite">
+            Le message s'ouvrira dans votre application d'e-mail, prêt à être envoyé.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <p class="footer__brand">ABI Gnim-gong Faustin — <span>portfolio, édition 2025</span></p>
+      <nav class="footer__nav" aria-label="Navigation de pied de page">
+        <a href="#accueil">Accueil</a>
+        <a href="#formation">Formation</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Revenir en haut de la page">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5.5 4.5 13l1.4 1.4L11 9.3V20h2V9.3l5.1 5.1L19.5 13z"/></svg>
+  </button>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Aperçu du dessin" hidden>
+    <button class="lightbox__close" id="lbClose" type="button" aria-label="Fermer l'aperçu">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6.4 5 5.6 5.6L17.6 5 19 6.4 13.4 12 19 17.6 17.6 19 12 13.4 6.4 19 5 17.6 10.6 12 5 6.4z"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" type="button" aria-label="Dessin précédent">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 4.6 8 12l7.4 7.4L16.8 18 10.8 12l6-6z"/></svg>
+    </button>
+    <figure class="lightbox__figure">
+      <img id="lbImage" src="" alt="">
+      <figcaption id="lbCaption"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" id="lbNext" type="button" aria-label="Dessin suivant">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.6 4.6 16 12l-7.4 7.4L7.2 18l6-6-6-6z"/></svg>
+    </button>
+  </div>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>
