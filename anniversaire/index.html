@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10101e">
+  <meta name="description" content="Une petite surprise pour une personne extraordinaire, née un 5 novembre.">
+  <title>Un jour pour toi ✦ 5 novembre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <main>
+    <section class="hero" id="accueil" aria-labelledby="hero-title">
+      <div class="hero__background" aria-hidden="true"></div>
+      <div class="stars" aria-hidden="true"></div>
+      <header class="header">
+        <a class="brand" href="#accueil" aria-label="Un jour pour toi, accueil"><span class="brand__star">✳</span><span>UN JOUR <i>pour</i> TOI</span></a>
+        <a class="header__link" href="#attention">UNE PETITE ATTENTION <span>↗</span></a>
+        <div class="header__date">05 <span>/</span> 11</div>
+      </header>
+
+      <div class="hero__content">
+        <div class="eyebrow"><span></span> UNE DATE UN PEU MAGIQUE <span></span></div>
+        <h1 id="hero-title">Aujourd’hui, le ciel<br>brille <em>pour toi.</em></h1>
+        <p class="hero__text">Il y a des jours qui méritent un peu plus de magie.<br>Le 5 novembre est l’un d’eux.</p>
+        <button class="surprise-button" type="button" data-open-surprise><span>Découvrir ta surprise</span><span class="button-arrow">↗</span></button>
+        <p class="hero__hint">FAIT AVEC LE CŒUR <span>♡</span></p>
+      </div>
+      <div class="hero__bottom">
+        <div class="bottom-note"><span class="small-sparkle">✧</span><span>UN MOMENT RIEN QU’À TOI<br><strong>5 NOVEMBRE</strong></span></div>
+        <a href="#attention" class="scroll-cue"><span>DÉFILER POUR DÉCOUVRIR</span><span class="scroll-line"></span></a>
+        <div class="bottom-right">UNE ÉTOILE DE PLUS<br><strong>DANS LE CIEL ✦</strong></div>
+      </div>
+    </section>
+
+    <section class="dedication" id="attention" aria-labelledby="dedication-title">
+      <div class="dedication__ornament" aria-hidden="true">✧</div>
+      <p class="section-label">QUELQUES MOTS POUR TOI</p>
+      <h2 id="dedication-title">Une journée aussi belle<br><em>que ton sourire.</em></h2>
+      <p class="dedication__text">Aujourd’hui, on célèbre bien plus qu’une date. On célèbre la belle personne que tu es, la lumière que tu apportes et tous les jolis moments qui restent à venir.</p>
+      <div class="divider"><span></span> ✦ <span></span></div>
+      <p class="signature">Joyeux anniversaire <span>♡</span></p>
+      <button class="text-button" type="button" data-open-surprise>Ouvrir ton petit mot <span>↗</span></button>
+      <div class="dedication__footer"><span>FAIT AVEC BEAUCOUP D’AFFECTION</span><span>05 NOVEMBRE ✦</span></div>
+    </section>
+  </main>
+
+  <div class="modal" id="surprise" hidden>
+    <div class="modal__backdrop" data-close-surprise></div>
+    <div class="modal__card" role="dialog" aria-modal="true" aria-labelledby="surprise-title" aria-describedby="surprise-message" tabindex="-1">
+      <button class="modal__close" type="button" data-close-surprise aria-label="Fermer la surprise">×</button>
+      <div class="modal__star" aria-hidden="true">✧</div>
+      <p class="section-label">UN PETIT MOT, JUSTE POUR TOI</p>
+      <h2 id="surprise-title">Joyeux<br><em>anniversaire !</em></h2>
+      <div class="divider"><span></span> ✦ <span></span></div>
+      <p id="surprise-message">Que cette nouvelle année t’apporte mille raisons de sourire, des rêves plein la tête et des moments aussi merveilleux que toi.</p>
+      <p class="modal__wish">Aujourd’hui, c’est ton jour. Profites-en ! <span>♡</span></p>
+      <button class="modal__again" type="button" id="celebrate">Encore un peu de magie <span>✦</span></button>
+    </div>
+  </div>
+  <canvas id="confetti" aria-hidden="true" hidden></canvas>
+</body>
+</html>
